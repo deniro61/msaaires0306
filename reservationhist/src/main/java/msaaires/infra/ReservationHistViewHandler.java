@@ -26,8 +26,8 @@ public class ReservationHistViewHandler {
             // view 객체 생성
             ReservationHist reservationHist = new ReservationHist();
             // view 객체에 이벤트의 Value 를 set 함
-            reservationHist.setCustomerId(reservationCreated.getCustomerId());
-            reservationHist.setEventType("예약생성");
+            reservationHist.setReservationId(reservationCreated.getReservationId());
+            reservationHist.setReservationStatus("ordered");
             // view 레파지 토리에 save
             reservationHistRepository.save(reservationHist);
 
